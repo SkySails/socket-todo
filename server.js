@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
-const reload = require("reload");
 var io = require("socket.io")(http);
 const short = require("short-uuid");
 const validate = require("jsonschema").validate;
@@ -56,5 +55,3 @@ io.on("connection", (socket) => {
 http.listen(port, () => {
   console.log("app listening on port:" + port);
 });
-
-reload(app);
