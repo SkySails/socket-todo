@@ -1,0 +1,6 @@
+{
+  "ext": "js,json,scss,html",
+  "events": {
+    "restart": "node-sass scss -o public/css"
+  }
+}

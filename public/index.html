@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app</title>
+  </head>
+  <link rel="stylesheet" href="css/main.css" />
+  <body>
+    <main>
+      <theme-toggle></theme-toggle>
+      <h1>Todo FWD2020</h1>
+      <p>
+        Feel free to produce the most spammed project board there has ever been!
+      </p>
+      <div id="board">
+        <div class="list__container">
+          <header>
+            <h2>Todo</h2>
+            <button onclick="addEditableCard(this)">
+              <svg
+                class="octicon octicon-plus"
+                viewBox="0 0 16 16"
+                version="1.1"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                ></path>
+              </svg>
+            </button>
+          </header>
+          <ul id="todo" class="list"></ul>
+        </div>
+        <div class="list__container">
+          <header>
+            <h2>In progress</h2>
+            <button onclick="addEditableCard(this)">
+              <svg
+                class="octicon octicon-plus"
+                viewBox="0 0 16 16"
+                version="1.1"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                ></path>
+              </svg>
+            </button>
+          </header>
+          <ul id="progress" class="list"></ul>
+        </div>
+        <div class="list__container">
+          <header>
+            <h2>Done</h2>
+            <button onclick="addEditableCard(this)">
+              <svg
+                class="octicon octicon-plus"
+                viewBox="0 0 16 16"
+                version="1.1"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"
+                ></path>
+              </svg>
+            </button>
+          </header>
+          <ul id="done" class="list"></ul>
+        </div>
+      </div>
+      <canvas id="confetti"></canvas>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.12/lib/draggable.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.12/lib/plugins.js"></script>
+    <script src="/reload/reload.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="confetti.js"></script>
+    <script src="app.js"></script>
+    <script src="theme.js"></script>
+  </body>
+</html>
