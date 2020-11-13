@@ -44,6 +44,12 @@ canvas {
   transition: opacity 1.5s;
 }
 
+body,
+html {
+  background: var(--bg-primary);
+  transition: $bezier;
+}
+
 main {
   padding: 1rem;
   min-height: 100vh;
