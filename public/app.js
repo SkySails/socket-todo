@@ -33,6 +33,7 @@ socket.on("init", function ({ todo, progress, done }) {
   $("#done").html(todosToString(done));
 
   $(`#${listName}`).prepend(editableCard);
+  $(".card--editable").find("textarea").focus();
 });
 
 const sortable = new Draggable.Sortable(document.querySelectorAll(".list"), {
