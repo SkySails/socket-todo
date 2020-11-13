@@ -60,8 +60,8 @@ const generateTodosObject = () =>
     { todo: [], progress: [], done: [] }
   );
 
-function sendUpdateToServer() {
-  socket.emit("update", generateTodosObject());
+function sendUpdateToServer(override) {
+  socket.emit("update", override || generateTodosObject());
 }
 
 sortable.on("drag:stopped", (e) => sendUpdateToServer());
